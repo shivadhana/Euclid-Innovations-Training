@@ -1,0 +1,21 @@
+
+## Upper and Lower input function to determine the prime numbers AND count within the determined range
+
+lower = int(input('Enter a number:'))
+upper = int(input('Enter a number:'))
+
+def prime(lower,upper):
+    count = 0
+    for num in range(lower, upper+1):
+        if num > 1:
+            for i in range(2, num):
+                if(num % i) == 0:
+                    break
+            else:
+                count = count + 1
+                print(f"prime no: {num} and Count: {count}")
+    print("Total Count:",count)
+prime(lower,upper)
+
+#Useful Link
+#https://www.tutorialgateway.org/python-program-to-print-prime-numbers-from-1-to-100/

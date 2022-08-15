@@ -1,0 +1,15 @@
+
+## Trial Two: Defining the upper and lower parameters for the function prime to run
+
+def prime(lower,upper):
+    count = 0
+    for num in range(lower, upper+1):
+        if num > 1:
+            for i in range(2, num):
+                if(num % i) == 0:
+                    break
+            else:
+                count = count + 1
+                print(f"prime no: {num} and Count: {count}")
+    print("Total Count:",count)            
+prime(2,100)
