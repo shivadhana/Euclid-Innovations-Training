@@ -7,3 +7,7 @@
 %config SqlMagic.feedback=False 
 %config SqlMagic.autopandas=True
 %sql postgresql+psycopg2://@/postgres
+
+
+df = %sql SELECT * FROM pg_catalog.pg_tables
+df
