@@ -1,0 +1,9 @@
+# install
+!apt install postgresql postgresql-contrib &>log
+!service postgresql start
+!sudo -u postgres psql -c "CREATE USER root WITH SUPERUSER"
+# set connection
+%load_ext sql
+%config SqlMagic.feedback=False 
+%config SqlMagic.autopandas=True
+%sql postgresql+psycopg2://@/postgres
