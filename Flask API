@@ -1,0 +1,19 @@
+!pip install flask-ngrok
+
+from flask_ngrok import run_with_ngrok
+from flask import Flask
+
+#running the flask app
+app = Flask(__name__)
+#need to start ngrok when app is run
+run_with_ngrok(app)
+@app.route('/')
+def index():
+  return "<h1> Trails of flask on Google Colab!</h1>"
+@app.route("/get details")
+def get_details():
+  return "<h1> This is the get details page!</h1>"
+@app.route("/test")
+def test_page():
+  return "<h1> This is a Test page!</h1>"
+app.run()
